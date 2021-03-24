@@ -1,4 +1,4 @@
 <div>
     <label>Receiver Name</label>
-    <input (input)="onNameChange($event.target.value)"> {{ name }}
+    <input (input)="onNameChange($event.target.value)"><br> {{ name | titlecase }}
 </div>
