@@ -22,7 +22,7 @@
         <div class="col">
             <label><b>Date</b></label>
             <div>
-                {{ date | date : "MMMM d, y" }}
+                {{ date | date : "fullDate" }}
             </div>
         </div>
     </div>
@@ -35,7 +35,20 @@
         <div class="col">
             <label><b>Amount</b></label>
             <div>
-                {{ amount | currency }}
+                {{ amount | currency : 'JPY' :'symbol':'4.2-2'}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col">
+            <label>Height</label>
+            <input type="number" class="form-control" (input)="onHeightChange($event.target.value)" />
+        </div>
+
+        <div class="col">
+            <label><b>Height</b></label>
+            <div>
+                {{ height | number: '1.0-3' }}
             </div>
         </div>
     </div>
