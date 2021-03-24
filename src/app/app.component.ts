@@ -10,11 +10,18 @@ export class AppComponent {
   date:string;
   amount : number;
   height:number;
-
+  mile : number;
+  car = {
+    model : 'BMW',
+    year : 2018,
+    type :'s500'
+  }
+  onChangeMiles(value:string){
+    this.mile=parseFloat(value);
+  }
   onHeightChange(value:string){
     this.height = parseFloat(value);
   }
-
   onNameChange(value : string){
     this.name=value;
   }
